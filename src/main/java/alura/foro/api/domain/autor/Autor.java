@@ -12,6 +12,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
@@ -29,6 +30,7 @@ public class Autor implements UserDetails {
     private String alias;
     private String email;
     private String clave;
+    private LocalDateTime fechaRegistro;
 
 
     public Autor(DatosRegistroAutor datosRegistroAutor) {
@@ -37,6 +39,7 @@ public class Autor implements UserDetails {
         this.alias = datosRegistroAutor.alias();
         this.email = datosRegistroAutor.email();
         this.clave = new BCryptPasswordEncoder().encode(datosRegistroAutor.clave());
+        this.fechaRegistro = LocalDateTime.now();
     }
 
     public void actualizarDatos(DatosActualizarAutor datosActualizarAutor) {

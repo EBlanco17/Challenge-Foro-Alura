@@ -1,0 +1,1 @@
+ALTER TABLE autores ADD COLUMN fecha_registro TIMESTAMP NOT NULL;
