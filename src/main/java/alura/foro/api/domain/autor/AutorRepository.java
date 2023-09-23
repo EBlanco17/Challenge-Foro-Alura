@@ -7,6 +7,5 @@ import java.util.UUID;
 
 public interface AutorRepository extends JpaRepository<Autor, UUID> {
 
-
     UserDetails findByAlias(String alias);
 }

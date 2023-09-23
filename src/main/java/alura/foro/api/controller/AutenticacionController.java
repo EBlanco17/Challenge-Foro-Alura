@@ -22,7 +22,7 @@ import java.net.URI;
 
 @RestController
 
-@Tag(name = "Autenticacion", description = "obtiene el token para el usuario asignado que da acceso al resto de endpoint")
+@Tag(name = "Autenticacion", description = "Login y registro de usuarios, da acceso al resto de endpoint")
 public class AutenticacionController {
 
     @Autowired

@@ -30,7 +30,6 @@ public class AutorController {
         return ResponseEntity.ok(autorRepository.findAll(paginacion).map(DatosListadoAutor::new));
     }
 
-
     @Operation(summary = "Actualiza los datos de un autor existente")
     @Transactional
     @PutMapping
